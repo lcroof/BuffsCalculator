@@ -32,6 +32,10 @@ namespace CalculatorDataController {
         
         private CAL_BUFFS_DAMAGEDataTable tableCAL_BUFFS_DAMAGE;
         
+        private CAL_FIGHT_INFODataTable tableCAL_FIGHT_INFO;
+        
+        private CAL_FIGHT_PERSONDataTable tableCAL_FIGHT_PERSON;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -71,6 +75,12 @@ namespace CalculatorDataController {
                 }
                 if ((ds.Tables["CAL_BUFFS_DAMAGE"] != null)) {
                     base.Tables.Add(new CAL_BUFFS_DAMAGEDataTable(ds.Tables["CAL_BUFFS_DAMAGE"]));
+                }
+                if ((ds.Tables["CAL_FIGHT_INFO"] != null)) {
+                    base.Tables.Add(new CAL_FIGHT_INFODataTable(ds.Tables["CAL_FIGHT_INFO"]));
+                }
+                if ((ds.Tables["CAL_FIGHT_PERSON"] != null)) {
+                    base.Tables.Add(new CAL_FIGHT_PERSONDataTable(ds.Tables["CAL_FIGHT_PERSON"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -127,6 +137,26 @@ namespace CalculatorDataController {
         public CAL_BUFFS_DAMAGEDataTable CAL_BUFFS_DAMAGE {
             get {
                 return this.tableCAL_BUFFS_DAMAGE;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public CAL_FIGHT_INFODataTable CAL_FIGHT_INFO {
+            get {
+                return this.tableCAL_FIGHT_INFO;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public CAL_FIGHT_PERSONDataTable CAL_FIGHT_PERSON {
+            get {
+                return this.tableCAL_FIGHT_PERSON;
             }
         }
         
@@ -209,6 +239,12 @@ namespace CalculatorDataController {
                 if ((ds.Tables["CAL_BUFFS_DAMAGE"] != null)) {
                     base.Tables.Add(new CAL_BUFFS_DAMAGEDataTable(ds.Tables["CAL_BUFFS_DAMAGE"]));
                 }
+                if ((ds.Tables["CAL_FIGHT_INFO"] != null)) {
+                    base.Tables.Add(new CAL_FIGHT_INFODataTable(ds.Tables["CAL_FIGHT_INFO"]));
+                }
+                if ((ds.Tables["CAL_FIGHT_PERSON"] != null)) {
+                    base.Tables.Add(new CAL_FIGHT_PERSONDataTable(ds.Tables["CAL_FIGHT_PERSON"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -266,6 +302,18 @@ namespace CalculatorDataController {
                     this.tableCAL_BUFFS_DAMAGE.InitVars();
                 }
             }
+            this.tableCAL_FIGHT_INFO = ((CAL_FIGHT_INFODataTable)(base.Tables["CAL_FIGHT_INFO"]));
+            if ((initTable == true)) {
+                if ((this.tableCAL_FIGHT_INFO != null)) {
+                    this.tableCAL_FIGHT_INFO.InitVars();
+                }
+            }
+            this.tableCAL_FIGHT_PERSON = ((CAL_FIGHT_PERSONDataTable)(base.Tables["CAL_FIGHT_PERSON"]));
+            if ((initTable == true)) {
+                if ((this.tableCAL_FIGHT_PERSON != null)) {
+                    this.tableCAL_FIGHT_PERSON.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -284,6 +332,10 @@ namespace CalculatorDataController {
             base.Tables.Add(this.tableCAL_FFLOGS_FIGHTEVENT);
             this.tableCAL_BUFFS_DAMAGE = new CAL_BUFFS_DAMAGEDataTable();
             base.Tables.Add(this.tableCAL_BUFFS_DAMAGE);
+            this.tableCAL_FIGHT_INFO = new CAL_FIGHT_INFODataTable();
+            base.Tables.Add(this.tableCAL_FIGHT_INFO);
+            this.tableCAL_FIGHT_PERSON = new CAL_FIGHT_PERSONDataTable();
+            base.Tables.Add(this.tableCAL_FIGHT_PERSON);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -307,6 +359,18 @@ namespace CalculatorDataController {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializeCAL_BUFFS_DAMAGE() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerializeCAL_FIGHT_INFO() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerializeCAL_FIGHT_PERSON() {
             return false;
         }
         
@@ -377,6 +441,12 @@ namespace CalculatorDataController {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void CAL_BUFFS_DAMAGERowChangeEventHandler(object sender, CAL_BUFFS_DAMAGERowChangeEvent e);
         
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void CAL_FIGHT_INFORowChangeEventHandler(object sender, CAL_FIGHT_INFORowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void CAL_FIGHT_PERSONRowChangeEventHandler(object sender, CAL_FIGHT_PERSONRowChangeEvent e);
+        
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
@@ -392,7 +462,7 @@ namespace CalculatorDataController {
             
             private global::System.Data.DataColumn columnBUFF_TYPE;
             
-            private global::System.Data.DataColumn columnJOB_ID;
+            private global::System.Data.DataColumn columnRAID_JOB_ID;
             
             private global::System.Data.DataColumn columnREALEASE_TIMES;
             
@@ -471,9 +541,9 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn JOB_IDColumn {
+            public global::System.Data.DataColumn RAID_JOB_IDColumn {
                 get {
-                    return this.columnJOB_ID;
+                    return this.columnRAID_JOB_ID;
                 }
             }
             
@@ -554,14 +624,14 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public CAL_BUFFS_INTERFACERow AddCAL_BUFFS_INTERFACERow(decimal ID, decimal BUFF_ID, string BUFF_NAME, string BUFF_TYPE, decimal JOB_ID, string REALEASE_TIMES, string START_TIME, string END_TIME, string BUFF_EFFECT_DESCRIPTION, string BUFF_EFFECT_TIME) {
+            public CAL_BUFFS_INTERFACERow AddCAL_BUFFS_INTERFACERow(decimal ID, decimal BUFF_ID, string BUFF_NAME, string BUFF_TYPE, decimal RAID_JOB_ID, string REALEASE_TIMES, string START_TIME, string END_TIME, string BUFF_EFFECT_DESCRIPTION, string BUFF_EFFECT_TIME) {
                 CAL_BUFFS_INTERFACERow rowCAL_BUFFS_INTERFACERow = ((CAL_BUFFS_INTERFACERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
                         BUFF_ID,
                         BUFF_NAME,
                         BUFF_TYPE,
-                        JOB_ID,
+                        RAID_JOB_ID,
                         REALEASE_TIMES,
                         START_TIME,
                         END_TIME,
@@ -593,7 +663,7 @@ namespace CalculatorDataController {
                 this.columnBUFF_ID = base.Columns["BUFF_ID"];
                 this.columnBUFF_NAME = base.Columns["BUFF_NAME"];
                 this.columnBUFF_TYPE = base.Columns["BUFF_TYPE"];
-                this.columnJOB_ID = base.Columns["JOB_ID"];
+                this.columnRAID_JOB_ID = base.Columns["RAID_JOB_ID"];
                 this.columnREALEASE_TIMES = base.Columns["REALEASE_TIMES"];
                 this.columnSTART_TIME = base.Columns["START_TIME"];
                 this.columnEND_TIME = base.Columns["END_TIME"];
@@ -612,8 +682,8 @@ namespace CalculatorDataController {
                 base.Columns.Add(this.columnBUFF_NAME);
                 this.columnBUFF_TYPE = new global::System.Data.DataColumn("BUFF_TYPE", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBUFF_TYPE);
-                this.columnJOB_ID = new global::System.Data.DataColumn("JOB_ID", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnJOB_ID);
+                this.columnRAID_JOB_ID = new global::System.Data.DataColumn("RAID_JOB_ID", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRAID_JOB_ID);
                 this.columnREALEASE_TIMES = new global::System.Data.DataColumn("REALEASE_TIMES", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnREALEASE_TIMES);
                 this.columnSTART_TIME = new global::System.Data.DataColumn("START_TIME", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1821,6 +1891,584 @@ namespace CalculatorDataController {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CAL_FIGHT_INFODataTable : global::System.Data.TypedTableBase<CAL_FIGHT_INFORow> {
+            
+            private global::System.Data.DataColumn columnFIGHT_NO;
+            
+            private global::System.Data.DataColumn columnBEGIN_TIME;
+            
+            private global::System.Data.DataColumn columnEND_TIME;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CAL_FIGHT_INFODataTable() {
+                this.TableName = "CAL_FIGHT_INFO";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal CAL_FIGHT_INFODataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected CAL_FIGHT_INFODataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn FIGHT_NOColumn {
+                get {
+                    return this.columnFIGHT_NO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn BEGIN_TIMEColumn {
+                get {
+                    return this.columnBEGIN_TIME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn END_TIMEColumn {
+                get {
+                    return this.columnEND_TIME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CAL_FIGHT_INFORow this[int index] {
+                get {
+                    return ((CAL_FIGHT_INFORow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event CAL_FIGHT_INFORowChangeEventHandler CAL_FIGHT_INFORowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event CAL_FIGHT_INFORowChangeEventHandler CAL_FIGHT_INFORowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event CAL_FIGHT_INFORowChangeEventHandler CAL_FIGHT_INFORowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event CAL_FIGHT_INFORowChangeEventHandler CAL_FIGHT_INFORowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddCAL_FIGHT_INFORow(CAL_FIGHT_INFORow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CAL_FIGHT_INFORow AddCAL_FIGHT_INFORow(string FIGHT_NO, string BEGIN_TIME, string END_TIME) {
+                CAL_FIGHT_INFORow rowCAL_FIGHT_INFORow = ((CAL_FIGHT_INFORow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        FIGHT_NO,
+                        BEGIN_TIME,
+                        END_TIME};
+                rowCAL_FIGHT_INFORow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCAL_FIGHT_INFORow);
+                return rowCAL_FIGHT_INFORow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                CAL_FIGHT_INFODataTable cln = ((CAL_FIGHT_INFODataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CAL_FIGHT_INFODataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal void InitVars() {
+                this.columnFIGHT_NO = base.Columns["FIGHT_NO"];
+                this.columnBEGIN_TIME = base.Columns["BEGIN_TIME"];
+                this.columnEND_TIME = base.Columns["END_TIME"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitClass() {
+                this.columnFIGHT_NO = new global::System.Data.DataColumn("FIGHT_NO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFIGHT_NO);
+                this.columnBEGIN_TIME = new global::System.Data.DataColumn("BEGIN_TIME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBEGIN_TIME);
+                this.columnEND_TIME = new global::System.Data.DataColumn("END_TIME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEND_TIME);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CAL_FIGHT_INFORow NewCAL_FIGHT_INFORow() {
+                return ((CAL_FIGHT_INFORow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CAL_FIGHT_INFORow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(CAL_FIGHT_INFORow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CAL_FIGHT_INFORowChanged != null)) {
+                    this.CAL_FIGHT_INFORowChanged(this, new CAL_FIGHT_INFORowChangeEvent(((CAL_FIGHT_INFORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CAL_FIGHT_INFORowChanging != null)) {
+                    this.CAL_FIGHT_INFORowChanging(this, new CAL_FIGHT_INFORowChangeEvent(((CAL_FIGHT_INFORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CAL_FIGHT_INFORowDeleted != null)) {
+                    this.CAL_FIGHT_INFORowDeleted(this, new CAL_FIGHT_INFORowChangeEvent(((CAL_FIGHT_INFORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CAL_FIGHT_INFORowDeleting != null)) {
+                    this.CAL_FIGHT_INFORowDeleting(this, new CAL_FIGHT_INFORowChangeEvent(((CAL_FIGHT_INFORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemoveCAL_FIGHT_INFORow(CAL_FIGHT_INFORow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                CalculatorDataSet ds = new CalculatorDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CAL_FIGHT_INFODataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CAL_FIGHT_PERSONDataTable : global::System.Data.TypedTableBase<CAL_FIGHT_PERSONRow> {
+            
+            private global::System.Data.DataColumn columnGUID;
+            
+            private global::System.Data.DataColumn columnNAME;
+            
+            private global::System.Data.DataColumn columnJOB_TYPE;
+            
+            private global::System.Data.DataColumn columnPET;
+            
+            private global::System.Data.DataColumn columnOWNER;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CAL_FIGHT_PERSONDataTable() {
+                this.TableName = "CAL_FIGHT_PERSON";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal CAL_FIGHT_PERSONDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected CAL_FIGHT_PERSONDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn GUIDColumn {
+                get {
+                    return this.columnGUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn NAMEColumn {
+                get {
+                    return this.columnNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn JOB_TYPEColumn {
+                get {
+                    return this.columnJOB_TYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn PETColumn {
+                get {
+                    return this.columnPET;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn OWNERColumn {
+                get {
+                    return this.columnOWNER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CAL_FIGHT_PERSONRow this[int index] {
+                get {
+                    return ((CAL_FIGHT_PERSONRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event CAL_FIGHT_PERSONRowChangeEventHandler CAL_FIGHT_PERSONRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event CAL_FIGHT_PERSONRowChangeEventHandler CAL_FIGHT_PERSONRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event CAL_FIGHT_PERSONRowChangeEventHandler CAL_FIGHT_PERSONRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event CAL_FIGHT_PERSONRowChangeEventHandler CAL_FIGHT_PERSONRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddCAL_FIGHT_PERSONRow(CAL_FIGHT_PERSONRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CAL_FIGHT_PERSONRow AddCAL_FIGHT_PERSONRow(decimal GUID, string NAME, string JOB_TYPE, string PET, decimal OWNER) {
+                CAL_FIGHT_PERSONRow rowCAL_FIGHT_PERSONRow = ((CAL_FIGHT_PERSONRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        GUID,
+                        NAME,
+                        JOB_TYPE,
+                        PET,
+                        OWNER};
+                rowCAL_FIGHT_PERSONRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCAL_FIGHT_PERSONRow);
+                return rowCAL_FIGHT_PERSONRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                CAL_FIGHT_PERSONDataTable cln = ((CAL_FIGHT_PERSONDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CAL_FIGHT_PERSONDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal void InitVars() {
+                this.columnGUID = base.Columns["GUID"];
+                this.columnNAME = base.Columns["NAME"];
+                this.columnJOB_TYPE = base.Columns["JOB_TYPE"];
+                this.columnPET = base.Columns["PET"];
+                this.columnOWNER = base.Columns["OWNER"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitClass() {
+                this.columnGUID = new global::System.Data.DataColumn("GUID", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGUID);
+                this.columnNAME = new global::System.Data.DataColumn("NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNAME);
+                this.columnJOB_TYPE = new global::System.Data.DataColumn("JOB_TYPE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJOB_TYPE);
+                this.columnPET = new global::System.Data.DataColumn("PET", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPET);
+                this.columnOWNER = new global::System.Data.DataColumn("OWNER", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOWNER);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CAL_FIGHT_PERSONRow NewCAL_FIGHT_PERSONRow() {
+                return ((CAL_FIGHT_PERSONRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CAL_FIGHT_PERSONRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(CAL_FIGHT_PERSONRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CAL_FIGHT_PERSONRowChanged != null)) {
+                    this.CAL_FIGHT_PERSONRowChanged(this, new CAL_FIGHT_PERSONRowChangeEvent(((CAL_FIGHT_PERSONRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CAL_FIGHT_PERSONRowChanging != null)) {
+                    this.CAL_FIGHT_PERSONRowChanging(this, new CAL_FIGHT_PERSONRowChangeEvent(((CAL_FIGHT_PERSONRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CAL_FIGHT_PERSONRowDeleted != null)) {
+                    this.CAL_FIGHT_PERSONRowDeleted(this, new CAL_FIGHT_PERSONRowChangeEvent(((CAL_FIGHT_PERSONRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CAL_FIGHT_PERSONRowDeleting != null)) {
+                    this.CAL_FIGHT_PERSONRowDeleting(this, new CAL_FIGHT_PERSONRowChangeEvent(((CAL_FIGHT_PERSONRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemoveCAL_FIGHT_PERSONRow(CAL_FIGHT_PERSONRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                CalculatorDataSet ds = new CalculatorDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CAL_FIGHT_PERSONDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class CAL_BUFFS_INTERFACERow : global::System.Data.DataRow {
@@ -1900,17 +2548,17 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal JOB_ID {
+            public decimal RAID_JOB_ID {
                 get {
                     try {
-                        return ((decimal)(this[this.tableCAL_BUFFS_INTERFACE.JOB_IDColumn]));
+                        return ((decimal)(this[this.tableCAL_BUFFS_INTERFACE.RAID_JOB_IDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“CAL_BUFFS_INTERFACE”中列“JOB_ID”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“CAL_BUFFS_INTERFACE”中列“RAID_JOB_ID”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableCAL_BUFFS_INTERFACE.JOB_IDColumn] = value;
+                    this[this.tableCAL_BUFFS_INTERFACE.RAID_JOB_IDColumn] = value;
                 }
             }
             
@@ -2044,14 +2692,14 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsJOB_IDNull() {
-                return this.IsNull(this.tableCAL_BUFFS_INTERFACE.JOB_IDColumn);
+            public bool IsRAID_JOB_IDNull() {
+                return this.IsNull(this.tableCAL_BUFFS_INTERFACE.RAID_JOB_IDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetJOB_IDNull() {
-                this[this.tableCAL_BUFFS_INTERFACE.JOB_IDColumn] = global::System.Convert.DBNull;
+            public void SetRAID_JOB_IDNull() {
+                this[this.tableCAL_BUFFS_INTERFACE.RAID_JOB_IDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2889,6 +3537,260 @@ namespace CalculatorDataController {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CAL_FIGHT_INFORow : global::System.Data.DataRow {
+            
+            private CAL_FIGHT_INFODataTable tableCAL_FIGHT_INFO;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal CAL_FIGHT_INFORow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCAL_FIGHT_INFO = ((CAL_FIGHT_INFODataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string FIGHT_NO {
+                get {
+                    try {
+                        return ((string)(this[this.tableCAL_FIGHT_INFO.FIGHT_NOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“CAL_FIGHT_INFO”中列“FIGHT_NO”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableCAL_FIGHT_INFO.FIGHT_NOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string BEGIN_TIME {
+                get {
+                    try {
+                        return ((string)(this[this.tableCAL_FIGHT_INFO.BEGIN_TIMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“CAL_FIGHT_INFO”中列“BEGIN_TIME”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableCAL_FIGHT_INFO.BEGIN_TIMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string END_TIME {
+                get {
+                    try {
+                        return ((string)(this[this.tableCAL_FIGHT_INFO.END_TIMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“CAL_FIGHT_INFO”中列“END_TIME”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableCAL_FIGHT_INFO.END_TIMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFIGHT_NONull() {
+                return this.IsNull(this.tableCAL_FIGHT_INFO.FIGHT_NOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFIGHT_NONull() {
+                this[this.tableCAL_FIGHT_INFO.FIGHT_NOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsBEGIN_TIMENull() {
+                return this.IsNull(this.tableCAL_FIGHT_INFO.BEGIN_TIMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetBEGIN_TIMENull() {
+                this[this.tableCAL_FIGHT_INFO.BEGIN_TIMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsEND_TIMENull() {
+                return this.IsNull(this.tableCAL_FIGHT_INFO.END_TIMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetEND_TIMENull() {
+                this[this.tableCAL_FIGHT_INFO.END_TIMEColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CAL_FIGHT_PERSONRow : global::System.Data.DataRow {
+            
+            private CAL_FIGHT_PERSONDataTable tableCAL_FIGHT_PERSON;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal CAL_FIGHT_PERSONRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCAL_FIGHT_PERSON = ((CAL_FIGHT_PERSONDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal GUID {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableCAL_FIGHT_PERSON.GUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“CAL_FIGHT_PERSON”中列“GUID”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableCAL_FIGHT_PERSON.GUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string NAME {
+                get {
+                    try {
+                        return ((string)(this[this.tableCAL_FIGHT_PERSON.NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“CAL_FIGHT_PERSON”中列“NAME”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableCAL_FIGHT_PERSON.NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string JOB_TYPE {
+                get {
+                    try {
+                        return ((string)(this[this.tableCAL_FIGHT_PERSON.JOB_TYPEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“CAL_FIGHT_PERSON”中列“JOB_TYPE”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableCAL_FIGHT_PERSON.JOB_TYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string PET {
+                get {
+                    try {
+                        return ((string)(this[this.tableCAL_FIGHT_PERSON.PETColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“CAL_FIGHT_PERSON”中列“PET”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableCAL_FIGHT_PERSON.PETColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal OWNER {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableCAL_FIGHT_PERSON.OWNERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“CAL_FIGHT_PERSON”中列“OWNER”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableCAL_FIGHT_PERSON.OWNERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsGUIDNull() {
+                return this.IsNull(this.tableCAL_FIGHT_PERSON.GUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetGUIDNull() {
+                this[this.tableCAL_FIGHT_PERSON.GUIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsNAMENull() {
+                return this.IsNull(this.tableCAL_FIGHT_PERSON.NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetNAMENull() {
+                this[this.tableCAL_FIGHT_PERSON.NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsJOB_TYPENull() {
+                return this.IsNull(this.tableCAL_FIGHT_PERSON.JOB_TYPEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetJOB_TYPENull() {
+                this[this.tableCAL_FIGHT_PERSON.JOB_TYPEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsPETNull() {
+                return this.IsNull(this.tableCAL_FIGHT_PERSON.PETColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetPETNull() {
+                this[this.tableCAL_FIGHT_PERSON.PETColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsOWNERNull() {
+                return this.IsNull(this.tableCAL_FIGHT_PERSON.OWNERColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetOWNERNull() {
+                this[this.tableCAL_FIGHT_PERSON.OWNERColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -3010,6 +3912,74 @@ namespace CalculatorDataController {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public CAL_BUFFS_DAMAGERow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class CAL_FIGHT_INFORowChangeEvent : global::System.EventArgs {
+            
+            private CAL_FIGHT_INFORow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CAL_FIGHT_INFORowChangeEvent(CAL_FIGHT_INFORow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CAL_FIGHT_INFORow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class CAL_FIGHT_PERSONRowChangeEvent : global::System.EventArgs {
+            
+            private CAL_FIGHT_PERSONRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CAL_FIGHT_PERSONRowChangeEvent(CAL_FIGHT_PERSONRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CAL_FIGHT_PERSONRow Row {
                 get {
                     return this.eventRow;
                 }

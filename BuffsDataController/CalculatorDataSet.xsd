@@ -19,7 +19,7 @@
               <xs:element name="BUFF_ID" msprop:Generator_ColumnVarNameInTable="columnBUFF_ID" msprop:Generator_ColumnPropNameInRow="BUFF_ID" msprop:Generator_ColumnPropNameInTable="BUFF_IDColumn" msprop:Generator_UserColumnName="BUFF_ID" type="xs:decimal" minOccurs="0" />
               <xs:element name="BUFF_NAME" msprop:Generator_ColumnVarNameInTable="columnBUFF_NAME" msprop:Generator_ColumnPropNameInRow="BUFF_NAME" msprop:Generator_ColumnPropNameInTable="BUFF_NAMEColumn" msprop:Generator_UserColumnName="BUFF_NAME" type="xs:string" minOccurs="0" />
               <xs:element name="BUFF_TYPE" msprop:Generator_ColumnVarNameInTable="columnBUFF_TYPE" msprop:Generator_ColumnPropNameInRow="BUFF_TYPE" msprop:Generator_ColumnPropNameInTable="BUFF_TYPEColumn" msprop:Generator_UserColumnName="BUFF_TYPE" type="xs:string" minOccurs="0" />
-              <xs:element name="JOB_ID" msprop:Generator_ColumnVarNameInTable="columnJOB_ID" msprop:Generator_ColumnPropNameInRow="JOB_ID" msprop:Generator_ColumnPropNameInTable="JOB_IDColumn" msprop:Generator_UserColumnName="JOB_ID" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RAID_JOB_ID" msprop:Generator_ColumnVarNameInTable="columnRAID_JOB_ID" msprop:Generator_ColumnPropNameInRow="RAID_JOB_ID" msprop:Generator_ColumnPropNameInTable="RAID_JOB_IDColumn" msprop:Generator_UserColumnName="RAID_JOB_ID" type="xs:decimal" minOccurs="0" />
               <xs:element name="REALEASE_TIMES" msprop:Generator_ColumnVarNameInTable="columnREALEASE_TIMES" msprop:Generator_ColumnPropNameInRow="REALEASE_TIMES" msprop:Generator_ColumnPropNameInTable="REALEASE_TIMESColumn" msprop:Generator_UserColumnName="REALEASE_TIMES" type="xs:string" minOccurs="0" />
               <xs:element name="START_TIME" msprop:Generator_ColumnVarNameInTable="columnSTART_TIME" msprop:Generator_ColumnPropNameInRow="START_TIME" msprop:Generator_ColumnPropNameInTable="START_TIMEColumn" msprop:Generator_UserColumnName="START_TIME" type="xs:string" minOccurs="0" />
               <xs:element name="END_TIME" msprop:Generator_ColumnVarNameInTable="columnEND_TIME" msprop:Generator_ColumnPropNameInRow="END_TIME" msprop:Generator_ColumnPropNameInTable="END_TIMEColumn" msprop:Generator_UserColumnName="END_TIME" type="xs:string" minOccurs="0" />
@@ -69,6 +69,26 @@
               <xs:element name="IS_CRITICAL" msprop:Generator_ColumnVarNameInTable="columnIS_CRITICAL" msprop:Generator_ColumnPropNameInRow="IS_CRITICAL" msprop:Generator_ColumnPropNameInTable="IS_CRITICALColumn" msprop:Generator_UserColumnName="IS_CRITICAL" type="xs:string" default="N" minOccurs="0" />
               <xs:element name="IS_DIRECT" msprop:Generator_ColumnVarNameInTable="columnIS_DIRECT" msprop:Generator_ColumnPropNameInRow="IS_DIRECT" msprop:Generator_ColumnPropNameInTable="IS_DIRECTColumn" msprop:Generator_UserColumnName="IS_DIRECT" type="xs:string" default="N" minOccurs="0" />
               <xs:element name="IS_BOTH" msprop:Generator_ColumnVarNameInTable="columnIS_BOTH" msprop:Generator_ColumnPropNameInRow="IS_BOTH" msprop:Generator_ColumnPropNameInTable="IS_BOTHColumn" msprop:Generator_UserColumnName="IS_BOTH" type="xs:string" default="N" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CAL_FIGHT_INFO" msprop:Generator_TableClassName="CAL_FIGHT_INFODataTable" msprop:Generator_TableVarName="tableCAL_FIGHT_INFO" msprop:Generator_TablePropName="CAL_FIGHT_INFO" msprop:Generator_RowDeletingName="CAL_FIGHT_INFORowDeleting" msprop:Generator_RowChangingName="CAL_FIGHT_INFORowChanging" msprop:Generator_RowEvHandlerName="CAL_FIGHT_INFORowChangeEventHandler" msprop:Generator_RowDeletedName="CAL_FIGHT_INFORowDeleted" msprop:Generator_UserTableName="CAL_FIGHT_INFO" msprop:Generator_RowChangedName="CAL_FIGHT_INFORowChanged" msprop:Generator_RowEvArgName="CAL_FIGHT_INFORowChangeEvent" msprop:Generator_RowClassName="CAL_FIGHT_INFORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FIGHT_NO" msprop:Generator_ColumnVarNameInTable="columnFIGHT_NO" msprop:Generator_ColumnPropNameInRow="FIGHT_NO" msprop:Generator_ColumnPropNameInTable="FIGHT_NOColumn" msprop:Generator_UserColumnName="FIGHT_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="BEGIN_TIME" msprop:Generator_ColumnVarNameInTable="columnBEGIN_TIME" msprop:Generator_ColumnPropNameInRow="BEGIN_TIME" msprop:Generator_ColumnPropNameInTable="BEGIN_TIMEColumn" msprop:Generator_UserColumnName="BEGIN_TIME" type="xs:string" minOccurs="0" />
+              <xs:element name="END_TIME" msprop:Generator_ColumnVarNameInTable="columnEND_TIME" msprop:Generator_ColumnPropNameInRow="END_TIME" msprop:Generator_ColumnPropNameInTable="END_TIMEColumn" msprop:Generator_UserColumnName="END_TIME" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CAL_FIGHT_PERSON" msprop:Generator_TableClassName="CAL_FIGHT_PERSONDataTable" msprop:Generator_TableVarName="tableCAL_FIGHT_PERSON" msprop:Generator_TablePropName="CAL_FIGHT_PERSON" msprop:Generator_RowDeletingName="CAL_FIGHT_PERSONRowDeleting" msprop:Generator_RowChangingName="CAL_FIGHT_PERSONRowChanging" msprop:Generator_RowEvHandlerName="CAL_FIGHT_PERSONRowChangeEventHandler" msprop:Generator_RowDeletedName="CAL_FIGHT_PERSONRowDeleted" msprop:Generator_UserTableName="CAL_FIGHT_PERSON" msprop:Generator_RowChangedName="CAL_FIGHT_PERSONRowChanged" msprop:Generator_RowEvArgName="CAL_FIGHT_PERSONRowChangeEvent" msprop:Generator_RowClassName="CAL_FIGHT_PERSONRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GUID" msprop:Generator_ColumnVarNameInTable="columnGUID" msprop:Generator_ColumnPropNameInRow="GUID" msprop:Generator_ColumnPropNameInTable="GUIDColumn" msprop:Generator_UserColumnName="GUID" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NAME" msprop:Generator_ColumnVarNameInTable="columnNAME" msprop:Generator_ColumnPropNameInRow="NAME" msprop:Generator_ColumnPropNameInTable="NAMEColumn" msprop:Generator_UserColumnName="NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="JOB_TYPE" msprop:Generator_ColumnVarNameInTable="columnJOB_TYPE" msprop:Generator_ColumnPropNameInRow="JOB_TYPE" msprop:Generator_ColumnPropNameInTable="JOB_TYPEColumn" msprop:Generator_UserColumnName="JOB_TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="PET" msprop:Generator_ColumnVarNameInTable="columnPET" msprop:Generator_ColumnPropNameInRow="PET" msprop:Generator_ColumnPropNameInTable="PETColumn" msprop:Generator_UserColumnName="PET" type="xs:string" minOccurs="0" />
+              <xs:element name="OWNER" msprop:Generator_ColumnVarNameInTable="columnOWNER" msprop:Generator_ColumnPropNameInRow="OWNER" msprop:Generator_ColumnPropNameInTable="OWNERColumn" msprop:Generator_UserColumnName="OWNER" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
