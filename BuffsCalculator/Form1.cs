@@ -13,7 +13,14 @@ namespace BuffsCalculator
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Calculate calculate = new Calculate();
+            calculate.FightCode = this.textBox1.Text;
+            calculate.GetJsonString();
         }
     }
 }

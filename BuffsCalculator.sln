@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuffsCalculator", "BuffsCalculator\BuffsCalculator.csproj", "{8B931D61-61F8-487B-BCA9-906A63EA2020}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E2AED863-C3F5-41A1-87DD-C9DFC76EF829} = {E2AED863-C3F5-41A1-87DD-C9DFC76EF829}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorDataController", "BuffsDataController\CalculatorDataController.csproj", "{E2AED863-C3F5-41A1-87DD-C9DFC76EF829}"
 EndProject

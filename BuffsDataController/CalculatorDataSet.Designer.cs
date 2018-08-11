@@ -1899,7 +1899,7 @@ namespace CalculatorDataController {
             
             private global::System.Data.DataColumn columnFIGHT_NO;
             
-            private global::System.Data.DataColumn columnBEGIN_TIME;
+            private global::System.Data.DataColumn columnSTART_TIME;
             
             private global::System.Data.DataColumn columnEND_TIME;
             
@@ -1946,9 +1946,9 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn BEGIN_TIMEColumn {
+            public global::System.Data.DataColumn START_TIMEColumn {
                 get {
-                    return this.columnBEGIN_TIME;
+                    return this.columnSTART_TIME;
                 }
             }
             
@@ -1997,11 +1997,11 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public CAL_FIGHT_INFORow AddCAL_FIGHT_INFORow(string FIGHT_NO, string BEGIN_TIME, string END_TIME) {
+            public CAL_FIGHT_INFORow AddCAL_FIGHT_INFORow(string FIGHT_NO, string START_TIME, string END_TIME) {
                 CAL_FIGHT_INFORow rowCAL_FIGHT_INFORow = ((CAL_FIGHT_INFORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         FIGHT_NO,
-                        BEGIN_TIME,
+                        START_TIME,
                         END_TIME};
                 rowCAL_FIGHT_INFORow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCAL_FIGHT_INFORow);
@@ -2026,7 +2026,7 @@ namespace CalculatorDataController {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnFIGHT_NO = base.Columns["FIGHT_NO"];
-                this.columnBEGIN_TIME = base.Columns["BEGIN_TIME"];
+                this.columnSTART_TIME = base.Columns["START_TIME"];
                 this.columnEND_TIME = base.Columns["END_TIME"];
             }
             
@@ -2035,8 +2035,8 @@ namespace CalculatorDataController {
             private void InitClass() {
                 this.columnFIGHT_NO = new global::System.Data.DataColumn("FIGHT_NO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFIGHT_NO);
-                this.columnBEGIN_TIME = new global::System.Data.DataColumn("BEGIN_TIME", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBEGIN_TIME);
+                this.columnSTART_TIME = new global::System.Data.DataColumn("START_TIME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSTART_TIME);
                 this.columnEND_TIME = new global::System.Data.DataColumn("END_TIME", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEND_TIME);
             }
@@ -3568,17 +3568,17 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string BEGIN_TIME {
+            public string START_TIME {
                 get {
                     try {
-                        return ((string)(this[this.tableCAL_FIGHT_INFO.BEGIN_TIMEColumn]));
+                        return ((string)(this[this.tableCAL_FIGHT_INFO.START_TIMEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“CAL_FIGHT_INFO”中列“BEGIN_TIME”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“CAL_FIGHT_INFO”中列“START_TIME”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableCAL_FIGHT_INFO.BEGIN_TIMEColumn] = value;
+                    this[this.tableCAL_FIGHT_INFO.START_TIMEColumn] = value;
                 }
             }
             
@@ -3612,14 +3612,14 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsBEGIN_TIMENull() {
-                return this.IsNull(this.tableCAL_FIGHT_INFO.BEGIN_TIMEColumn);
+            public bool IsSTART_TIMENull() {
+                return this.IsNull(this.tableCAL_FIGHT_INFO.START_TIMEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetBEGIN_TIMENull() {
-                this[this.tableCAL_FIGHT_INFO.BEGIN_TIMEColumn] = global::System.Convert.DBNull;
+            public void SetSTART_TIMENull() {
+                this[this.tableCAL_FIGHT_INFO.START_TIMEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

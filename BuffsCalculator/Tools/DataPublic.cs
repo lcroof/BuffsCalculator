@@ -26,8 +26,7 @@ namespace BuffsCalculator
         public static T JsonStringConvert<T>(string jsonStr)
         {
             //设置转化JSON格式时字段长度
-            string json = JsonConvert.SerializeObject(jsonStr);
-            T obj = JsonConvert.DeserializeObject<T>(json);
+            T obj = JsonConvert.DeserializeObject<T>(jsonStr);
             return obj;
         }
     }
