@@ -10,9 +10,8 @@
         public const string FFlogsHttpsHeader = @"https://www.fflogs.com:443/v1";
 
         #endregion
-
-        public const string FFlogsAPIKeyForFight = @"?api_key=02903654300d62111fc1d279b07c9102";
-        public const string FFlogsAPIKey = @"&api_key=02903654300d62111fc1d279b07c9102";
+        
+        public const string FFlogsAPIKey = @"api_key=02903654300d62111fc1d279b07c9102";
 
         #region BuffAbilityName
 
@@ -55,6 +54,13 @@
         public const string EnabledY = "Y";
         public const string OWNER = "PETOWNER";
         public const string TYPE = "TYPE";
+
+        #endregion
+
+        #region Symbol
+
+        public const string question = @"?";
+        public const string ampersand = @"&";
 
         #endregion
     }

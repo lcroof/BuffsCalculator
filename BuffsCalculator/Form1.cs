@@ -19,7 +19,9 @@ namespace BuffsCalculator
         private void button1_Click(object sender, EventArgs e)
         {
             Calculate calculate = new Calculate();
+            this.textBox1.Text = "gq82HBPvhapDLdtc";
             calculate.FightCode = this.textBox1.Text;
+            calculate.FightID = Convert.ToDecimal(this.textBox2.Text);
             calculate.GetJsonString();
         }
     }

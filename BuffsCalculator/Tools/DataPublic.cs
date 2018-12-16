@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
 
 namespace BuffsCalculator
 {
@@ -12,8 +13,16 @@ namespace BuffsCalculator
         /// <returns></returns>
         public static string GetJsonSerializeString(string jsonString, string node)
         {
-            JObject obj = JObject.Parse(jsonString);
-            string jsonSelectSting = obj[node].ToString();
+            string jsonSelectSting = string.Empty;
+            try
+            {
+                JObject obj = JObject.Parse(jsonString);
+                jsonSelectSting = obj[node].ToString();
+            }
+            catch
+            {
+                return jsonSelectSting;
+            }
             return jsonSelectSting;
         }
 

@@ -474,6 +474,10 @@ namespace CalculatorDataController {
             
             private global::System.Data.DataColumn columnBUFF_EFFECT_TIME;
             
+            private global::System.Data.DataColumn columnCREATE_TIME;
+            
+            private global::System.Data.DataColumn columnFIGHT_GUID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public CAL_BUFFS_INTERFACEDataTable() {
@@ -589,6 +593,22 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CREATE_TIMEColumn {
+                get {
+                    return this.columnCREATE_TIME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn FIGHT_GUIDColumn {
+                get {
+                    return this.columnFIGHT_GUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -624,7 +644,7 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public CAL_BUFFS_INTERFACERow AddCAL_BUFFS_INTERFACERow(decimal ID, decimal BUFF_ID, string BUFF_NAME, string BUFF_TYPE, decimal RAID_JOB_ID, string REALEASE_TIMES, string START_TIME, string END_TIME, string BUFF_EFFECT_DESCRIPTION, string BUFF_EFFECT_TIME) {
+            public CAL_BUFFS_INTERFACERow AddCAL_BUFFS_INTERFACERow(decimal ID, decimal BUFF_ID, string BUFF_NAME, string BUFF_TYPE, decimal RAID_JOB_ID, string REALEASE_TIMES, string START_TIME, string END_TIME, string BUFF_EFFECT_DESCRIPTION, string BUFF_EFFECT_TIME, string CREATE_TIME, string FIGHT_GUID) {
                 CAL_BUFFS_INTERFACERow rowCAL_BUFFS_INTERFACERow = ((CAL_BUFFS_INTERFACERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -636,7 +656,9 @@ namespace CalculatorDataController {
                         START_TIME,
                         END_TIME,
                         BUFF_EFFECT_DESCRIPTION,
-                        BUFF_EFFECT_TIME};
+                        BUFF_EFFECT_TIME,
+                        CREATE_TIME,
+                        FIGHT_GUID};
                 rowCAL_BUFFS_INTERFACERow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCAL_BUFFS_INTERFACERow);
                 return rowCAL_BUFFS_INTERFACERow;
@@ -669,6 +691,8 @@ namespace CalculatorDataController {
                 this.columnEND_TIME = base.Columns["END_TIME"];
                 this.columnBUFF_EFFECT_DESCRIPTION = base.Columns["BUFF_EFFECT_DESCRIPTION"];
                 this.columnBUFF_EFFECT_TIME = base.Columns["BUFF_EFFECT_TIME"];
+                this.columnCREATE_TIME = base.Columns["CREATE_TIME"];
+                this.columnFIGHT_GUID = base.Columns["FIGHT_GUID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -694,6 +718,10 @@ namespace CalculatorDataController {
                 base.Columns.Add(this.columnBUFF_EFFECT_DESCRIPTION);
                 this.columnBUFF_EFFECT_TIME = new global::System.Data.DataColumn("BUFF_EFFECT_TIME", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBUFF_EFFECT_TIME);
+                this.columnCREATE_TIME = new global::System.Data.DataColumn("CREATE_TIME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCREATE_TIME);
+                this.columnFIGHT_GUID = new global::System.Data.DataColumn("FIGHT_GUID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFIGHT_GUID);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1189,7 +1217,7 @@ namespace CalculatorDataController {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class CAL_FFLOGS_FIGHTEVENTDataTable : global::System.Data.TypedTableBase<CAL_FFLOGS_FIGHTEVENTRow> {
             
-            private global::System.Data.DataColumn columnID;
+            private global::System.Data.DataColumn columnTIMESTAMP;
             
             private global::System.Data.DataColumn columnRAID_JOB_ID;
             
@@ -1200,8 +1228,6 @@ namespace CalculatorDataController {
             private global::System.Data.DataColumn columnSKILL_DAMAGE;
             
             private global::System.Data.DataColumn columnHIT_TYPE;
-            
-            private global::System.Data.DataColumn columnMUTISTRIKE;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -1238,9 +1264,9 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
+            public global::System.Data.DataColumn TIMESTAMPColumn {
                 get {
-                    return this.columnID;
+                    return this.columnTIMESTAMP;
                 }
             }
             
@@ -1286,14 +1312,6 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn MUTISTRIKEColumn {
-                get {
-                    return this.columnMUTISTRIKE;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1329,16 +1347,15 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public CAL_FFLOGS_FIGHTEVENTRow AddCAL_FFLOGS_FIGHTEVENTRow(decimal ID, decimal RAID_JOB_ID, decimal SKILL_ID, string SKILL_NAME, decimal SKILL_DAMAGE, string HIT_TYPE, string MUTISTRIKE) {
+            public CAL_FFLOGS_FIGHTEVENTRow AddCAL_FFLOGS_FIGHTEVENTRow(decimal TIMESTAMP, decimal RAID_JOB_ID, decimal SKILL_ID, string SKILL_NAME, decimal SKILL_DAMAGE, decimal HIT_TYPE) {
                 CAL_FFLOGS_FIGHTEVENTRow rowCAL_FFLOGS_FIGHTEVENTRow = ((CAL_FFLOGS_FIGHTEVENTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID,
+                        TIMESTAMP,
                         RAID_JOB_ID,
                         SKILL_ID,
                         SKILL_NAME,
                         SKILL_DAMAGE,
-                        HIT_TYPE,
-                        MUTISTRIKE};
+                        HIT_TYPE};
                 rowCAL_FFLOGS_FIGHTEVENTRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCAL_FFLOGS_FIGHTEVENTRow);
                 return rowCAL_FFLOGS_FIGHTEVENTRow;
@@ -1361,20 +1378,19 @@ namespace CalculatorDataController {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnID = base.Columns["ID"];
+                this.columnTIMESTAMP = base.Columns["TIMESTAMP"];
                 this.columnRAID_JOB_ID = base.Columns["RAID_JOB_ID"];
                 this.columnSKILL_ID = base.Columns["SKILL_ID"];
                 this.columnSKILL_NAME = base.Columns["SKILL_NAME"];
                 this.columnSKILL_DAMAGE = base.Columns["SKILL_DAMAGE"];
                 this.columnHIT_TYPE = base.Columns["HIT_TYPE"];
-                this.columnMUTISTRIKE = base.Columns["MUTISTRIKE"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
+                this.columnTIMESTAMP = new global::System.Data.DataColumn("TIMESTAMP", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIMESTAMP);
                 this.columnRAID_JOB_ID = new global::System.Data.DataColumn("RAID_JOB_ID", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRAID_JOB_ID);
                 this.columnSKILL_ID = new global::System.Data.DataColumn("SKILL_ID", typeof(decimal), null, global::System.Data.MappingType.Element);
@@ -1383,11 +1399,8 @@ namespace CalculatorDataController {
                 base.Columns.Add(this.columnSKILL_NAME);
                 this.columnSKILL_DAMAGE = new global::System.Data.DataColumn("SKILL_DAMAGE", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSKILL_DAMAGE);
-                this.columnHIT_TYPE = new global::System.Data.DataColumn("HIT_TYPE", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnHIT_TYPE = new global::System.Data.DataColumn("HIT_TYPE", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHIT_TYPE);
-                this.columnMUTISTRIKE = new global::System.Data.DataColumn("MUTISTRIKE", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMUTISTRIKE);
-                this.columnMUTISTRIKE.DefaultValue = ((string)("N"));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2644,6 +2657,38 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string CREATE_TIME {
+                get {
+                    try {
+                        return ((string)(this[this.tableCAL_BUFFS_INTERFACE.CREATE_TIMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“CAL_BUFFS_INTERFACE”中列“CREATE_TIME”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableCAL_BUFFS_INTERFACE.CREATE_TIMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string FIGHT_GUID {
+                get {
+                    try {
+                        return ((string)(this[this.tableCAL_BUFFS_INTERFACE.FIGHT_GUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“CAL_BUFFS_INTERFACE”中列“FIGHT_GUID”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableCAL_BUFFS_INTERFACE.FIGHT_GUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsIDNull() {
                 return this.IsNull(this.tableCAL_BUFFS_INTERFACE.IDColumn);
             }
@@ -2760,6 +2805,30 @@ namespace CalculatorDataController {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetBUFF_EFFECT_TIMENull() {
                 this[this.tableCAL_BUFFS_INTERFACE.BUFF_EFFECT_TIMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCREATE_TIMENull() {
+                return this.IsNull(this.tableCAL_BUFFS_INTERFACE.CREATE_TIMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCREATE_TIMENull() {
+                this[this.tableCAL_BUFFS_INTERFACE.CREATE_TIMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFIGHT_GUIDNull() {
+                return this.IsNull(this.tableCAL_BUFFS_INTERFACE.FIGHT_GUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFIGHT_GUIDNull() {
+                this[this.tableCAL_BUFFS_INTERFACE.FIGHT_GUIDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3046,17 +3115,17 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal ID {
+            public decimal TIMESTAMP {
                 get {
                     try {
-                        return ((decimal)(this[this.tableCAL_FFLOGS_FIGHTEVENT.IDColumn]));
+                        return ((decimal)(this[this.tableCAL_FFLOGS_FIGHTEVENT.TIMESTAMPColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“CAL_FFLOGS_FIGHTEVENT”中列“ID”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“CAL_FFLOGS_FIGHTEVENT”中列“TIMESTAMP”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableCAL_FFLOGS_FIGHTEVENT.IDColumn] = value;
+                    this[this.tableCAL_FFLOGS_FIGHTEVENT.TIMESTAMPColumn] = value;
                 }
             }
             
@@ -3126,10 +3195,10 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string HIT_TYPE {
+            public decimal HIT_TYPE {
                 get {
                     try {
-                        return ((string)(this[this.tableCAL_FFLOGS_FIGHTEVENT.HIT_TYPEColumn]));
+                        return ((decimal)(this[this.tableCAL_FFLOGS_FIGHTEVENT.HIT_TYPEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("表“CAL_FFLOGS_FIGHTEVENT”中列“HIT_TYPE”的值为 DBNull。", e);
@@ -3142,30 +3211,14 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string MUTISTRIKE {
-                get {
-                    try {
-                        return ((string)(this[this.tableCAL_FFLOGS_FIGHTEVENT.MUTISTRIKEColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“CAL_FFLOGS_FIGHTEVENT”中列“MUTISTRIKE”的值为 DBNull。", e);
-                    }
-                }
-                set {
-                    this[this.tableCAL_FFLOGS_FIGHTEVENT.MUTISTRIKEColumn] = value;
-                }
+            public bool IsTIMESTAMPNull() {
+                return this.IsNull(this.tableCAL_FFLOGS_FIGHTEVENT.TIMESTAMPColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsIDNull() {
-                return this.IsNull(this.tableCAL_FFLOGS_FIGHTEVENT.IDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetIDNull() {
-                this[this.tableCAL_FFLOGS_FIGHTEVENT.IDColumn] = global::System.Convert.DBNull;
+            public void SetTIMESTAMPNull() {
+                this[this.tableCAL_FFLOGS_FIGHTEVENT.TIMESTAMPColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3226,18 +3279,6 @@ namespace CalculatorDataController {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetHIT_TYPENull() {
                 this[this.tableCAL_FFLOGS_FIGHTEVENT.HIT_TYPEColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsMUTISTRIKENull() {
-                return this.IsNull(this.tableCAL_FFLOGS_FIGHTEVENT.MUTISTRIKEColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetMUTISTRIKENull() {
-                this[this.tableCAL_FFLOGS_FIGHTEVENT.MUTISTRIKEColumn] = global::System.Convert.DBNull;
             }
         }
         

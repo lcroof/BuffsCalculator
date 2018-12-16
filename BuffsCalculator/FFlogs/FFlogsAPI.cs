@@ -27,7 +27,7 @@ namespace BuffsCalculator
         public static string GetFight(string fightCode)
         {
             string jsonString = WebAPI.HttpGet(
-                string.Format(GlobalVariable.FFlogsHttpsHeader + GlobalVariable.FFlogsAPIGetFightsUrl + GlobalVariable.FFlogsAPIKeyForFight, 
+                string.Format(GlobalVariable.FFlogsHttpsHeader + GlobalVariable.FFlogsAPIGetFightsUrl + GlobalVariable.question + GlobalVariable.FFlogsAPIKey, 
                 fightCode));
             return jsonString;
         }
@@ -42,7 +42,7 @@ namespace BuffsCalculator
         public static string GetFightEvent(string fightCode, string startTime, string endTime)
         {
             string jsonString = WebAPI.HttpGet(
-                string.Format(GlobalVariable.FFlogsHttpsHeader + GlobalVariable.FFlogsAPIGetEventsUrl + GlobalVariable.FFlogsAPIKeyForFight, 
+                string.Format(GlobalVariable.FFlogsHttpsHeader + GlobalVariable.FFlogsAPIGetEventsUrl + GlobalVariable.ampersand + GlobalVariable.FFlogsAPIKey, 
                 fightCode, startTime, endTime));
             return jsonString;
         }
