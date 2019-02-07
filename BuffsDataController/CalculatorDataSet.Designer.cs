@@ -1546,7 +1546,7 @@ namespace CalculatorDataController {
             
             private global::System.Data.DataColumn columnJOB_NAME;
             
-            private global::System.Data.DataColumn columnATRRBIRUTE_DAMAGE;
+            private global::System.Data.DataColumn columnATRRIBUTE_DAMAGE;
             
             private global::System.Data.DataColumn columnIS_CRITICAL;
             
@@ -1637,9 +1637,9 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ATRRBIRUTE_DAMAGEColumn {
+            public global::System.Data.DataColumn ATRRIBUTE_DAMAGEColumn {
                 get {
-                    return this.columnATRRBIRUTE_DAMAGE;
+                    return this.columnATRRIBUTE_DAMAGE;
                 }
             }
             
@@ -1704,7 +1704,7 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public CAL_BUFFS_DAMAGERow AddCAL_BUFFS_DAMAGERow(decimal BUFF_ID, string BUFF_NAME, decimal SKILL_ID, string SKILL_NAME, decimal JOB_ID, string JOB_NAME, string ATRRBIRUTE_DAMAGE, string IS_CRITICAL, string IS_DIRECT, string IS_BOTH) {
+            public CAL_BUFFS_DAMAGERow AddCAL_BUFFS_DAMAGERow(decimal BUFF_ID, string BUFF_NAME, decimal SKILL_ID, string SKILL_NAME, decimal JOB_ID, string JOB_NAME, string ATRRIBUTE_DAMAGE, string IS_CRITICAL, string IS_DIRECT, string IS_BOTH) {
                 CAL_BUFFS_DAMAGERow rowCAL_BUFFS_DAMAGERow = ((CAL_BUFFS_DAMAGERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         BUFF_ID,
@@ -1713,7 +1713,7 @@ namespace CalculatorDataController {
                         SKILL_NAME,
                         JOB_ID,
                         JOB_NAME,
-                        ATRRBIRUTE_DAMAGE,
+                        ATRRIBUTE_DAMAGE,
                         IS_CRITICAL,
                         IS_DIRECT,
                         IS_BOTH};
@@ -1745,7 +1745,7 @@ namespace CalculatorDataController {
                 this.columnSKILL_NAME = base.Columns["SKILL_NAME"];
                 this.columnJOB_ID = base.Columns["JOB_ID"];
                 this.columnJOB_NAME = base.Columns["JOB_NAME"];
-                this.columnATRRBIRUTE_DAMAGE = base.Columns["ATRRBIRUTE_DAMAGE"];
+                this.columnATRRIBUTE_DAMAGE = base.Columns["ATRRIBUTE_DAMAGE"];
                 this.columnIS_CRITICAL = base.Columns["IS_CRITICAL"];
                 this.columnIS_DIRECT = base.Columns["IS_DIRECT"];
                 this.columnIS_BOTH = base.Columns["IS_BOTH"];
@@ -1766,8 +1766,8 @@ namespace CalculatorDataController {
                 base.Columns.Add(this.columnJOB_ID);
                 this.columnJOB_NAME = new global::System.Data.DataColumn("JOB_NAME", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnJOB_NAME);
-                this.columnATRRBIRUTE_DAMAGE = new global::System.Data.DataColumn("ATRRBIRUTE_DAMAGE", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnATRRBIRUTE_DAMAGE);
+                this.columnATRRIBUTE_DAMAGE = new global::System.Data.DataColumn("ATRRIBUTE_DAMAGE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnATRRIBUTE_DAMAGE);
                 this.columnIS_CRITICAL = new global::System.Data.DataColumn("IS_CRITICAL", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIS_CRITICAL);
                 this.columnIS_DIRECT = new global::System.Data.DataColumn("IS_DIRECT", typeof(string), null, global::System.Data.MappingType.Element);
@@ -3394,17 +3394,17 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string ATRRBIRUTE_DAMAGE {
+            public string ATRRIBUTE_DAMAGE {
                 get {
                     try {
-                        return ((string)(this[this.tableCAL_BUFFS_DAMAGE.ATRRBIRUTE_DAMAGEColumn]));
+                        return ((string)(this[this.tableCAL_BUFFS_DAMAGE.ATRRIBUTE_DAMAGEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“CAL_BUFFS_DAMAGE”中列“ATRRBIRUTE_DAMAGE”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“CAL_BUFFS_DAMAGE”中列“ATRRIBUTE_DAMAGE”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableCAL_BUFFS_DAMAGE.ATRRBIRUTE_DAMAGEColumn] = value;
+                    this[this.tableCAL_BUFFS_DAMAGE.ATRRIBUTE_DAMAGEColumn] = value;
                 }
             }
             
@@ -3530,14 +3530,14 @@ namespace CalculatorDataController {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsATRRBIRUTE_DAMAGENull() {
-                return this.IsNull(this.tableCAL_BUFFS_DAMAGE.ATRRBIRUTE_DAMAGEColumn);
+            public bool IsATRRIBUTE_DAMAGENull() {
+                return this.IsNull(this.tableCAL_BUFFS_DAMAGE.ATRRIBUTE_DAMAGEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetATRRBIRUTE_DAMAGENull() {
-                this[this.tableCAL_BUFFS_DAMAGE.ATRRBIRUTE_DAMAGEColumn] = global::System.Convert.DBNull;
+            public void SetATRRIBUTE_DAMAGENull() {
+                this[this.tableCAL_BUFFS_DAMAGE.ATRRIBUTE_DAMAGEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
