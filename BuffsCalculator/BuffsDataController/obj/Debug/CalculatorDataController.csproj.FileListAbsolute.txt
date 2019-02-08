@@ -1,0 +1,6 @@
+D:\C#程序\BuffsDataController\bin\Debug\CalculatorDataController.dll
+D:\C#程序\BuffsDataController\bin\Debug\CalculatorDataController.pdb
+D:\C#程序\BuffsDataController\obj\Debug\CalculatorDataController.csproj.CoreCompileInputs.cache
+D:\C#程序\BuffsDataController\obj\Debug\CalculatorDataController.dll
+D:\C#程序\BuffsDataController\obj\Debug\CalculatorDataController.pdb
+D:\C#程序\BuffsDataController\obj\Debug\CalculatorDataController.csprojAssemblyReference.cache
