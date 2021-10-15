@@ -16,6 +16,7 @@ namespace BuffsCalculator
         public static string GetAllResoucesByAbilityID(string fightCode, string startTime, string endTime, decimal abilityID)
         {
             string jsonString = string.Empty;
+            string a = string.Empty;
             return jsonString;
         }
 
